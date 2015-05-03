@@ -167,10 +167,6 @@ var projects = {
             }
           }
         }
-        // set the project image size to be consistent
-        var imgList = $("#projects").find('img');
-        imgList.width("100px");
-        imgList.height("74px");
       }
     }
 };
