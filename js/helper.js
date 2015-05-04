@@ -85,7 +85,9 @@ function logClicks(x,y) {
 }
 
 $(document).click(function(loc) {
-  // your code goes here!
+  var x = loc.pageX;
+  var y = loc.pageY;
+  logClicks(x, y);
 });
 
 
@@ -170,7 +172,9 @@ function initializeMap() {
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
-      // your code goes here!
+      var latitude = this.position.lat();
+      var longitude = this.position.lng();
+      window.open("http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q="+latitude+","+longitude+"&sll="+latitude+","+longitude+"&sspn=0.172749,0.4422&ie=UTF8&ll="+latitude+","+longitude+"&spn=0.162818,0.4422&z=11&iwloc=A");
     });
 
     // this is where the pin actually gets added to the map.
